@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-menu__container {
+
+    justify-content: right;
+    display: flex;
+    width: 80%;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+header {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0 80px 0 80px;
+    position: absolute;
+    background-color:rgba(255, 255, 255, 0.5);
+}
+
+header img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.main-menu__container ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-inline-start: 0;
+    /*list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+*/
+}
+
+.main-menu__container ul li {
+    color: #073d6f;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.intro__container  {
+    background: url("../image/liana-mikah-sK1nYjXcXCY-unsplash11.jpg");
+    background-size: cover;
+    height: 900px;
+}
+
+h1 {
+    color: blue;
+    /* font-size: 170px; */
+}
+
+.logo__container {
+    width: 20%;
+}
+
+p {
+    color: #f08200;
+    letter-spacing: 31px;
+    font-size: 68px;
+    position: absolute;
+    top: 450px;
+    left: 462px;
+}

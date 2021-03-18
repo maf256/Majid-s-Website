@@ -19,8 +19,9 @@ header {
     align-items: center;
     height: 80px;
     padding: 0 80px 0 80px;
-    position: absolute;
+    position: fixed;
     background-color:rgba(255, 255, 255, 0.5);
+    z-index: 1;
 }
 
 header img {
@@ -51,23 +52,155 @@ header img {
 .intro__container  {
     background: url("../image/liana-mikah-sK1nYjXcXCY-unsplash11.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     height: 900px;
+    width: 100%;
 }
 
-h1 {
-    color: blue;
-    /* font-size: 170px; */
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+.welcome {
+    background: #073d6f;
+    opacity: .2;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 800px;
+}
+.header-welcome {
+    color: #073d6f;
+    position: absolute;
+    top: 800px;
+    text-transform: uppercase;
+    font-size: 40px;
 }
 
 .logo__container {
     width: 20%;
 }
 
-p {
+.intro__container p {
     color: #f08200;
     letter-spacing: 31px;
     font-size: 68px;
     position: absolute;
     top: 450px;
     left: 462px;
+}
+
+.services__container h1:nth-child(1){
+    padding-top: 50px;
+    letter-spacing: 7px;
+    font-size: 50px;
+    justify-content: center;
+    display: flex;
+    color: #073d6f;
+}
+
+.services__container .background-image {
+    background: url("../image/stil-xhb7s-Q-ECA-unsplash.jpg");
+    background-size: cover;
+    width: 25%;
+    height: 600px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 25%;
+
+}
+.rectangle-border{
+    width: 25%;
+    height: 550px;
+    margin-top: 50px;
+    margin-left: 28%;
+    border: #f08200 solid 5px;
+    position:absolute;
+}
+
+.services__container ul {
+    margin-top: 80px;
+    line-height: 40px;
+    font-size: 25px;
+    margin-left: 55%;
+    color: #073d6f;
+    list-style-type: none;
+}
+
+.services__container button {
+    height: 50px;
+    width: 190px;
+    border: none;
+    border-radius: 25px;
+    background: hsl(209, 81%, 33%);
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0px 0px 20px #0d0e0f99, 0 0 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 1320px;
+    left: 70%;
+}
+.box__text {
+    margin-left: 700px;
+    margin-top: 100px;
+    width: 550px;
+    height: 350px;
+    background :hsl(209, 46%, 51%, 0.2);
+    font-size: 30px;
+    color: #073d6f;
+    padding: 20px;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+footer {
+    width: 100%;
+    height: 300px;
+    background: #dadbd9;
+    margin-top: 600px;
+    padding-top: 70px;
+     
+    /* padding: 90px 0px 0px 90px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .image img{
+    padding-left: 70px;
+    width: 50px;
+    height: 50px;
+}
+.image{
+    justify-content: center;
+    display: flex;
+}
+
+.apps__footer .social__logo {
+    display: flex;
+}
+
+/* .apps__footer{
+    margin-left: 35%;
+} */
+
+.social__logo img{
+    width: 50px;
+}
+
+footer .social__logo li {
+    list-style: none;
+}
+
+.menu {
+    padding-right: 70px;
+}
+.menu li{
+    list-style: none;
+    font-size: 20px;
+    color: #073d6f;
+    line-height: 40px;
+    text-align: right;
+
+
 }

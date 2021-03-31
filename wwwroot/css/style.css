@@ -146,7 +146,9 @@ header {
     color: #073d6f;
 
 }
-
+.services__container {
+    height:80vw;
+}
 .services__container .background-image {
     background: url("../image/stil-xhb7s-Q-ECA-unsplash.jpg");
     background-size: cover;
@@ -215,8 +217,6 @@ footer {
     padding-top: 2vw;
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    top: 150vw;
     width: 100%;
 }
 
@@ -289,6 +289,7 @@ footer .social__logo li {
 }
 
 .p2--main {
+    height: 34vw;
     padding-left: 10%;
     padding-right: 10%;
     display: flex;
@@ -364,7 +365,7 @@ footer .social__logo li {
     border-radius: 1.1vw;
 }
 
-h2 {
+label    {
     font-size: 2vw;
     color: #073d6f;
     margin-top: 0vw;
@@ -375,10 +376,10 @@ h2 {
 }
 
 input {
+    font-size:1vw;
     margin-left: 31%;
     display: flex;
     justify-content: center;
-    /* text-align: center; */
     border: #073d6f solid 0.1vw;
     border-radius: 1.1vw;
     width: 35vw;
@@ -394,11 +395,11 @@ input {
     color: #fff;
     font-size: 1vw;
     box-shadow: 0px 0px 20px #0d0e0f99, 0 0 20px rgb(0 0 0 / 10%);
-    position: absolute;
-    left: 57.5%;
+    margin-left: 57.5vw;
 }
 
 textarea {
+    margin-bottom: 1vw;
     font-size: 1vw;
     margin-left: 31%;
     display: flex;
@@ -407,4 +408,7 @@ textarea {
     border-radius: 1.1vw;
     width: 35vw;
     height: 12vw;
+}
+.clsForm {
+    padding-bottom: 3vw;
 }

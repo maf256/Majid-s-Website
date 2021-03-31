@@ -64,27 +64,87 @@ function header() {
 header()
 
 
-
 function footer() {
-    return (`
-        <div class="image">
-            <img src="wwwroot/image/Asset 1.png" alt="Logo">
-        </div>      
-        <div class="apps__footer">
-            <h1>CONTACT US</h1>
-            <ul class="social__logo">
-                <li><img src="wwwroot/image/Asset 1.png" alt=""></li>
-                <li><img src="wwwroot/image/Asset 1.png" alt=""></li>
-                <li><img src="wwwroot/image/Asset 1.png" alt=""></li>
-            </ul>
-        </div>
-        <div>
-            <ul class="menu">
-                <li>ABOUT US</li>
-                <li>OUR SERVICES</li>
-                <li>OUR PROJECT</li>
-            </ul>
-        </div>    
-    `)
+    const logoContainer = document.createElement('div');
+    logoContainer.setAttribute("class","image");
+
+    const footerLogo = document.createElement('img');
+    footerLogo.setAttribute("src","wwwroot/image/Asset 1.png");
+    footerLogo.setAttribute("alt","Logo");
+
+    logoContainer.appendChild(footerLogo);
+
+    const socialContainer = document.createElement('div');
+    socialContainer.setAttribute("class","apps__footer");
+
+    const socialHeader = document.createElement('h1');
+    socialHeader.innerHTML = "CONTACT US";
+    
+    const socialLogos = document.createElement('ul');
+    socialLogos.setAttribute("class","social__logo");
+    
+    const  liSocialLogos= [
+        {src: "wwwroot/image/Asset 1.png", alt:"img1"},
+        {src: "wwwroot/image/Asset 1.png", alt:"img1"},
+        {src: "wwwroot/image/Asset 1.png",alt:"img1"}];
+    
+    for (let i=0;i < liSocialLogos.length; i++) {
+        const liSocialLogo = document.createElement('li');
+
+        const liImg = document.createElement('img');
+        liImg.setAttribute("src",liSocialLogos[i].src);
+        liImg.setAttribute("alt",liSocialLogos[i].alt);
+        
+        liSocialLogo.appendChild(liImg);
+        socialLogos.appendChild(liSocialLogo);
+    }
+    
+    socialContainer.appendChild(socialHeader);
+    socialContainer.appendChild(socialLogos);
+    
+    const useFullLinksContainer = document.createElement('div');
+    
+    const useFullLinksUl = document.createElement('ul');
+    useFullLinksUl.setAttribute("class", "menu");
+
+    const liLinks = ["ABOUT US","OUR SERVICES","OUR PROJECT"];
+    liLinks.forEach(element => {
+        const liLink = document.createElement('li');
+        liLink.innerHTML = element ;
+
+        useFullLinksUl.appendChild(liLink);   
+    });
+    
+    useFullLinksContainer.appendChild(useFullLinksUl);
+
+    footerTag.appendChild(logoContainer);
+    footerTag.appendChild(socialContainer);
+    footerTag.appendChild(useFullLinksContainer);
+
 }
-footerTag.innerHTML = footer()
+
+footer ();
+
+// function _footer() {
+//     return (`
+//         <div class="image">
+//             <img src="wwwroot/image/Asset 1.png" alt="Logo">
+//         </div>      
+//         <div class="apps__footer">
+//             <h1>CONTACT US</h1>
+//             <ul class="social__logo">
+//                 <li><img src="wwwroot/image/Asset 1.png" alt=""></li>
+//                 <li><img src="wwwroot/image/Asset 1.png" alt=""></li>
+//                 <li><img src="wwwroot/image/Asset 1.png" alt=""></li>
+//             </ul>
+//         </div>
+//         <div>
+//             <ul class="menu">
+//                 <li>ABOUT US</li>
+//                 <li>OUR SERVICES</li>
+//                 <li>OUR PROJECT</li>
+//             </ul>
+//         </div>    
+//     `)
+// }
+// footerTag.innerHTML = footer()

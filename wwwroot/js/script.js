@@ -84,9 +84,9 @@ function footer() {
     socialLogos.setAttribute("class","social__logo");
     
     const  liSocialLogos= [
-        {src: "wwwroot/image/Asset 1.png", alt:"img1"},
-        {src: "wwwroot/image/Asset 1.png", alt:"img1"},
-        {src: "wwwroot/image/Asset 1.png",alt:"img1"}];
+        {src: "wwwroot/image/instagram.png", alt:"img1"},
+        {src: "wwwroot/image/facebook.png", alt:"img1"},
+        {src: "wwwroot/image/email.png",alt:"img1"}];
     
     for (let i=0;i < liSocialLogos.length; i++) {
         const liSocialLogo = document.createElement('li');

@@ -222,6 +222,7 @@ footer {
 
 footer h1 {
     font-size: 2vw;
+    padding-left: 2vw;
 }
 
 footer .image img{
@@ -241,6 +242,8 @@ footer .image img{
     margin-bottom: 0px;
     width: 4vw;
     height: 4vw;
+    padding-left: 1.5vw;
+
 }
 
 .apps__footer{
@@ -263,6 +266,7 @@ footer .image img{
 
 footer .social__logo li {
     list-style: none;
+    padding-left: 1.5vw;
 }
 
 .menu {
@@ -297,11 +301,11 @@ footer .social__logo li {
 }
 
 .p2--our--services1 {
+    box-shadow: 1px 1px 1px 1px #f3efef;
     width: 15vw;
     height: 19vw;
-    /* background: #f08200  ; */
-    border-color: blue;
-    border-style: solid;
+    border-style: solid 1.5vw;
+    border-color: #073d6f;
     border-radius: 2.3vw;
 }
 
@@ -315,6 +319,7 @@ footer .social__logo li {
 }
 
 .p2--our--services1 p {
+    color: #073d6f;
     padding-left: 0.5vw;
     padding-right: 0.5vw;
     text-align: center;
@@ -363,27 +368,39 @@ footer .social__logo li {
     width: 90vw;
     border: #073d6f solid 0.1vw;
     border-radius: 1.1vw;
+    color: #073d6f;
+}
+
+.p3--address h1 {
+    font-weight: normal;
+    font-size: 1.8vw;
+    text-transform: uppercase;
+
 }
 
 label    {
     font-size: 2vw;
     color: #073d6f;
     margin-top: 0vw;
+    padding-top: 1.5vw;
     margin-left: 31%;
     font-weight: inherit;
     margin-bottom: 0vw;
-    
+    text-transform: uppercase;
 }
 
 input {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
     font-size:1vw;
     margin-left: 31%;
     display: flex;
     justify-content: center;
     border: #073d6f solid 0.1vw;
-    border-radius: 1.1vw;
+    border-radius: 2vw;
     width: 35vw;
-    height: 1.8vw;
+    height: 3vw;
+
 }
 
 .btnSend {

@@ -125,26 +125,45 @@ function footer() {
 
 footer ();
 
-// function _footer() {
-//     return (`
-//         <div class="image">
-//             <img src="wwwroot/image/Asset 1.png" alt="Logo">
-//         </div>      
-//         <div class="apps__footer">
-//             <h1>CONTACT US</h1>
-//             <ul class="social__logo">
-//                 <li><img src="wwwroot/image/Asset 1.png" alt=""></li>
-//                 <li><img src="wwwroot/image/Asset 1.png" alt=""></li>
-//                 <li><img src="wwwroot/image/Asset 1.png" alt=""></li>
-//             </ul>
-//         </div>
-//         <div>
-//             <ul class="menu">
-//                 <li>ABOUT US</li>
-//                 <li>OUR SERVICES</li>
-//                 <li>OUR PROJECT</li>
-//             </ul>
-//         </div>    
-//     `)
-// }
-// footerTag.innerHTML = footer()
+
+
+// *********** My Contacts ***********
+
+const main = document.getElementById("myContactsMainPage")
+
+function getAllFormData() {
+    return fetch('http://localhost:3000/form/save')
+    .then(response => response.json())
+}
+
+function createTable() {
+    const table = document.createElement("table")
+    const rowHeader = document.createElement("tr")
+    table.appendChild(rowHeader)
+    main.appendChild(table)
+
+    getAllFormData()
+    .then(formData => {
+        // Header
+        for(const key in formData[0]) {
+            const th = document.createElement("th")
+            const text = document.createTextNode(key)
+            th.appendChild(text)
+            rowHeader.appendChild(th)
+        }
+        // Rows
+        formData.forEach(rowData => {
+            // Row
+            const row = document.createElement("tr")
+            for(const key in rowData) {
+                const td = document.createElement("td")
+                const text = document.createTextNode(rowData[key])
+                td.appendChild(text)
+                row.appendChild(td)
+            }
+            table.appendChild(row)
+        })
+    })
+}
+
+createTable()
